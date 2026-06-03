@@ -2,6 +2,7 @@
 
 > What drives a track's popularity? Analyzing audio features, genres, and engagement
 > across a music catalog.
+> **Companion project:** [Netflix content analytics](https://github.com/Mallika56/netflix-analytics) · **Cross-platform synthesis:** [Content platforms comparison](https://github.com/Mallika56/content-platforms-comparison)
 
 **Skills demonstrated:** SQL + Python · Correlation & distribution analysis · Visualization · Data storytelling
 
