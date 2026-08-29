@@ -66,3 +66,5 @@ The included `spotify_tracks.csv` is a **synthetic sample** built to mirror the 
 of the real Kaggle "Spotify Tracks Dataset," with realistic correlations between audio
 features and popularity baked in, plus injected messiness (nulls, impossible values,
 duplicates). Swap in the real Kaggle file to run the identical pipeline on actual data.
+
+<!-- push access verification 2026-08-29T17:33:37Z -->
