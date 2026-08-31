@@ -111,7 +111,7 @@ df.loc[df.sample(8, random_state=3).index, "duration_ms"] = -1  # impossible dur
 # 3) Exact duplicate rows
 df = pd.concat([df, df.sample(20, random_state=4)], ignore_index=True)
 
-df.to_csv("/home/claude/spotify_tracks.csv", index=False)
+df.to_csv("data/spotify_tracks.csv", index=False)
 print("Rows:", len(df))
 print("\nNulls:\n", df.isnull().sum())
 print("\nPopularity describe:\n", df["popularity"].describe().round(1))
