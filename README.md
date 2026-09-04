@@ -41,18 +41,33 @@ spotify-analytics/
 ## How to Run
 
 ```bash
-pip install pandas numpy duckdb matplotlib seaborn jupyter ipykernel
+pip install -r requirements.txt
 jupyter notebook notebooks/spotify_analytics_starter.ipynb
 ```
 
+Regenerate the synthetic dataset with `python generate_spotify.py` (writes
+`data/spotify_tracks.csv`). Run the test suite with `pytest`.
+
 ## Key Findings
 
-_(Fill in from your analysis — write insights, not observations.)_
+1. **Danceable, energetic, and vocal tracks win; tempo is irrelevant.** Popularity
+   correlates positively with danceability (r = 0.43), energy (0.35), and loudness
+   (0.33), and negatively with acousticness (−0.34) and instrumentalness (−0.33).
+   Tempo shows essentially no relationship (r = 0.01).
+2. **Volume and popularity diverge.** The most-catalogued genres are pop, hip-hop,
+   and rock, but ranked by *average* popularity, hip-hop matches pop despite 9%
+   fewer tracks, while rock trails pop by 13 points despite a large catalog. What
+   gets made is not what gets streamed.
+3. **Popularity is bell-shaped around the mid-60s**, not a long-tail skew — mean
+   ≈ median (61.1 / 62.0), with most tracks showing at least some traction rather
+   than a few mega-hits dominating.
+4. **Volatility varies sharply by genre.** EDM, k-pop, hip-hop, and reggaeton have
+   the widest popularity spread (biggest gap between hits and misses); other
+   genres cluster tightly around their average — a distinction that matters more
+   than the average alone for anyone betting on a genre.
 
-1. **Finding 1** — _what correlates with popularity_
-2. **Finding 2** — _numerous vs. popular genres_
-3. **Finding 3** — _how genres sound_
-4. **Finding 4** — _distribution shape_
+See `notebooks/spotify_analytics_starter.ipynb` (Phase 5) for the full write-up,
+including limitations on what audio features can and can't predict.
 
 ## Limitations
 
@@ -66,5 +81,3 @@ The included `spotify_tracks.csv` is a **synthetic sample** built to mirror the 
 of the real Kaggle "Spotify Tracks Dataset," with realistic correlations between audio
 features and popularity baked in, plus injected messiness (nulls, impossible values,
 duplicates). Swap in the real Kaggle file to run the identical pipeline on actual data.
-
-<!-- push access verification 2026-08-29T17:33:37Z -->
